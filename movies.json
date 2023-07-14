@@ -1,0 +1,20 @@
+{
+    "movies": [
+      {
+        "titulo": "Elemental",
+        "anio": 2023,
+        "resumen": "Elemental, de Disney y Pixar, es un nuevo largometraje original ambientado en Ciudad Elemento, donde conviven habitantes de fuego, agua, tierra y aire. La protagonista de la historia es Candela, una joven fuerte, ingeniosa y con carácter, cuya amistad con un chico divertido, sensible y tranquilo, llamado Nilo, cambia su perspectiva sobre el mundo en el que viven."
+      },
+      {
+        "titulo": "Guardians of the Galaxy Vol 3",
+        "anio": 2023,
+        "resumen": "Aunque sigue afectado por la pérdida de Gamora, Peter Quill debe reunir a su equipo para defender el universo de una nueva amenaza o, en caso de fracasar, será el final de los Guardianes."
+      },
+      {
+        "titulo": "Dune Part Two",
+        "anio": 2023,
+        "resumen": "Este es el resumen de la película Dune Part Two."
+      }
+    ]
+  }
+  

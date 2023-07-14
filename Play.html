@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="estruc">
+      
+    <header>
+        <nav>
+          <button id="btn-volver" onclick="volverPaginaPrincipal()">Volver</button>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="reproductor-container">
+          <video id="video" controls></video>
+        </div>
+    
+        <section class="conteiner-movies">
+            <div class="info-pelicula">
+                <h2 id="titulo"></h2>
+                <h4 id="anio"></h4>
+                <p id="resumen"></p>
+           </div> 
+        </section>
+    </main>
+    
+<script src="js/script.js"></script>
+<script>
+    function volverPaginaPrincipal() {
+        window.location.href = "index.html";
+    }
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoPath = urlParams.get('video');
+  
+    const videoPlayer = document.getElementById('video');
+    videoPlayer.src = videoPath;
+
+    fetch('movies.json')
+    .then(response => response.json())
+    .then(data => {
+      const movie = data.movies.find(movie => movie.titulo === getMovieTitleFromPath(videoPath));
+      if (movie) {
+        document.getElementById('titulo').textContent = movie.titulo;
+        document.getElementById('anio').textContent = movie.anio;
+        document.getElementById('resumen').textContent = movie.resumen;
+      }
+    })
+    .catch(error => console.error('Error al cargar los datos de la película:', error));
+
+  function getMovieTitleFromPath(path) {
+    const match = /movies\/(.+)\.mp4$/.exec(path);
+    if (match) {
+      return match[1];
+    }
+    return null;
+  }
+</script>
+  
+</body>
+</html>
