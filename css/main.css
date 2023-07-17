@@ -103,6 +103,25 @@ body {
   left: 10px;
 }
 
+footer {
+  background: rgba(0, 0, 0, 0.288);
+  padding: 10px;
+  display: flex;
+}
+footer .foot {
+  display: flex;
+  align-items: center;
+}
+footer .foot img {
+  width: 2em;
+  display: block;
+}
+footer .foot p {
+  color: #fff;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
 @media (max-width: 800px) {
   body {
     min-height: 0vh;
