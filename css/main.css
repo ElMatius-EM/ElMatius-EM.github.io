@@ -118,10 +118,19 @@ footer .foot img {
   width: 2em;
   display: block;
 }
+}
+footer .foot a {
+  text-decoration: none;
+}
 footer .foot p {
   color: #fff;
   font-weight: 600;
-  padding-left: 5px;
+  margin-left: 0.5em;
+  border-radius: 5em;
+  background-color: #171517;
+  box-shadow: 0 0 5px rgba(24, 164, 206, 0.4431372549);
+  padding: 7px;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
