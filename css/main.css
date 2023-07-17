@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: rgb(47, 48, 48);
+  background: radial-gradient(circle, rgb(47, 48, 48) 0%, rgb(48, 44, 48) 50%, rgb(58, 51, 62) 100%);
+  overflow: hidden;
+}
+
+.conteiner {
+  margin: 1em 5em 1em 5em;
+}
+
+.search {
+  border: 2px solid rgba(0, 0, 0, 0.226);
+  margin: 2em 5em 0 5em;
+  border-radius: 10em;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.521);
+  backdrop-filter: blur(0.7rem);
+  -webkit-backdrop-filter: blur(0.7rem);
+  box-shadow: 0 0 40px rgba(12, 144, 184, 0.3215686275);
+}
+.search .search-txt {
+  align-items: center;
+  display: flex;
+}
+.search .logo {
+  width: 12em;
+}
+.search .logo:hover {
+  width: 12.2em;
+}
+.search .insta {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #d1d2d4;
+  font-weight: 600;
+}
+.search .insta:hover {
+  color: #18a3ce;
+  border-radius: 5em;
+  background-color: #252424;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  cursor: pointer;
+}
+
+.movies {
+  padding: 50px 0 20px 0;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+.swiper-slide img:hover {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.295);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.288);
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+footer .foot {
+  display: flex;
+  align-items: center;
+}
+footer .foot img {
+  width: 2em;
+  display: block;
+}
+footer .foot p {
+  color: #fff;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow: hidden;
+  }
+  .conteiner {
+    margin: 1em 2em 2.2em 2em;
+  }
+  .search {
+    margin: 2em 1em 0 1em;
+    padding: 1em 2em;
+  }
+  .search .search-txt {
+    display: grid;
+  }
+  .search .logo {
+    width: 7em;
+  }
+  .search .logo:hover {
+    width: 7.1em;
+  }
+  .search .insta {
+    font-size: 0.9em;
+  }
+}
+/*----------REPRODUCTOR DE VIDEO-------------*/
+.estruct {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reproductor-container {
+  width: 70%;
+  margin: 2em auto 2em auto;
+}
+
+#video {
+  width: 100%;
+  height: auto;
+}
+
+.conteiner-movies {
+  margin: 0;
+}
+.conteiner-movies .info-pelicula {
+  border: 1px solid #333;
+  border-radius: 20px;
+  margin: 0 15em 2em 15em;
+  padding: 1em;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.conteiner-movies .info-pelicula h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.conteiner-movies .info-pelicula h4 {
+  margin-bottom: 1em;
+}
+.conteiner-movies .info-pelicula p {
+  margin-bottom: 0em;
+}
+
+@media (max-width: 991px) {
+  .conteiner-movies {
+    margin: 0;
+  }
+  .conteiner-movies .info-pelicula {
+    min-width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .conteiner-movies {
+    margin: 0;
+  }
+  .info-pelicula {
+    min-width: 350px;
+  }
+}/*# sourceMappingURL=main.css.map */
