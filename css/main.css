@@ -133,7 +133,11 @@ footer .foot p {
     overflow: hidden;
   }
   .conteiner {
-    margin: 2.5em 2em 1em 2em;
+    margin: 1em 2em 1em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
   }
   .search {
     margin: 2em 1em 0 1em;
